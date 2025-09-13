@@ -12,6 +12,13 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Nuosu SIL font for headings */
+.font-serif {
+  font-family: "Nuosu SIL", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
