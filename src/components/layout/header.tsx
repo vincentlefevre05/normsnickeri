@@ -45,6 +45,21 @@ const Header = () => {
     { name: 'Om oss', href: '#about-norm' },
   ]
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault()
+    const targetId = href.replace('#', '')
+    const targetElement = targetId === 'top' ? document.body : document.getElementById(targetId)
+    
+    if (targetElement) {
+      const yOffset = -100 // Account for fixed header
+      const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset
+      window.scrollTo({ top: targetId === 'top' ? 0 : y, behavior: 'smooth' })
+    }
+    
+    // Close mobile menu if open
+    setIsMenuOpen(false)
+  }
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
@@ -68,13 +83,14 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center backdrop-blur-md bg-white/70 px-6 py-3">
             {navItems.map((item) => (
-              <Link
+              <a
                 key={item.name}
                 href={item.href}
-                className="text-neutral-600 hover:text-black transition-colors duration-200 font-medium text-lg px-4"
+                onClick={(e) => handleNavClick(e, item.href)}
+                className="text-neutral-600 hover:text-black transition-colors duration-200 font-medium text-lg px-4 cursor-pointer"
               >
                 {item.name}
-              </Link>
+              </a>
             ))}
           </nav>
 
@@ -109,13 +125,13 @@ const Header = () => {
             <ul className="space-y-4">
               {navItems.map((item) => (
                 <li key={item.name}>
-                  <Link
+                  <a
                     href={item.href}
-                    onClick={() => setIsMenuOpen(false)}
-                    className="block text-lg text-neutral-600 hover:text-black transition-colors duration-200 py-2"
+                    onClick={(e) => handleNavClick(e, item.href)}
+                    className="block text-lg text-neutral-600 hover:text-black transition-colors duration-200 py-2 cursor-pointer"
                   >
                     {item.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
               <li className="pt-4 border-t border-neutral-200">

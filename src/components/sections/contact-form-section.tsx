@@ -8,8 +8,7 @@ const ContactFormSection = () => {
     name: '',
     email: '',
     phone: '',
-    projectDescription: '',
-    consent: false
+    projectDescription: ''
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -29,8 +28,7 @@ const ContactFormSection = () => {
         name: '',
         email: '',
         phone: '',
-        projectDescription: '',
-        consent: false
+        projectDescription: ''
       })
     } catch (error) {
       setSubmitStatus('error')
@@ -153,25 +151,6 @@ const ContactFormSection = () => {
             </div>
           </div>
 
-          {/* Consent */}
-          <div className="flex items-start gap-3">
-            <input
-              type="checkbox"
-              id="consent"
-              name="consent"
-              required
-              checked={formData.consent}
-              onChange={handleChange}
-              className="mt-1 w-4 h-4 text-[#2a2a2a] bg-white border-neutral-300 focus:ring-[#2a2a2a] focus:ring-2"
-            />
-            <label htmlFor="consent" className="text-sm text-neutral-700">
-              Jag samtycker till behandling av mina personuppgifter *
-            </label>
-          </div>
-
-          <p className="text-xs text-neutral-500">
-            Genom att skicka godkänner du vår hantering av personuppgifter.
-          </p>
 
           {/* Submit button */}
           <button

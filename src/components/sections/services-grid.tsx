@@ -49,7 +49,7 @@ const ServicesGrid = () => {
       x: 0,
       opacity: 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 20,
         stiffness: 100
       }

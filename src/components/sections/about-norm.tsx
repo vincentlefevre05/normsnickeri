@@ -23,7 +23,7 @@ const AboutNorm = () => {
   }, [])
 
   return (
-    <section id="about-norm" className="pt-24 pb-32 bg-[#fefbfa]">
+    <section id="about-norm" className="pt-24 pb-40 bg-[#fefbfa]">
       <div className="max-w-7xl mx-auto" style={{paddingLeft: '60px', paddingRight: '60px'}}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           

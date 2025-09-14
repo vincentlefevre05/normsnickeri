@@ -125,9 +125,6 @@ const Footer = () => {
                 height={40}
                 className="h-10 w-auto"
               />
-              <p className="text-sm text-neutral-400">
-                Kvalitetssnickerier sedan 1985
-              </p>
             </div>
             
             <p className="text-sm text-neutral-500">
