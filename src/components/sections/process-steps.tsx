@@ -16,7 +16,7 @@ const steps = [
   },
   {
     id: 3,
-    title: 'Samarbete med arkitekter & inredningsdesigners',
+    title: 'Samarbete med designers',
     description: 'Vi synkar ritningar och teknik för rätt passform och uttryck.'
   },
   {
@@ -95,8 +95,8 @@ const ProcessSteps = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="relative"
         >
-          {/* Animated timeline line */}
-          <div className="absolute left-[24px] lg:left-[50%] transform lg:-translate-x-1/2 w-[2px] h-full bg-neutral-200">
+          {/* Animated timeline line - desktop only */}
+          <div className="hidden lg:block absolute left-[50%] transform -translate-x-1/2 w-[2px] h-full bg-neutral-200">
             <motion.div 
               className="absolute top-0 left-0 w-full bg-gradient-to-b from-[#2a2a2a] to-neutral-600"
               style={{ height: lineHeight }}
@@ -122,31 +122,22 @@ const ProcessSteps = () => {
                       scale: 1.02,
                       boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
                     }}
-                    className="w-full lg:w-[calc(50%-3rem)] bg-white p-6 lg:p-8 shadow-lg ml-12 lg:ml-0"
+                    className="w-full lg:w-[calc(50%-3rem)] bg-white p-6 lg:p-8 shadow-lg"
                   >
-                    <div className="flex items-start gap-4 lg:gap-6">
-                      {/* Number circle */}
-                      <div className="relative">
-                        <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-[#2a2a2a] to-neutral-700 flex items-center justify-center shadow-xl">
-                          <span className="text-xl lg:text-2xl font-bold text-white">{step.id}</span>
-                        </div>
-                      </div>
-
-                      {/* Text content */}
-                      <div className="flex-1">
-                        <h3 className="text-lg font-semibold text-neutral-900 mb-3">
-                          {step.title}
-                        </h3>
-                        <p className="text-base text-neutral-600 leading-relaxed">
-                          {step.description}
-                        </p>
-                      </div>
+                    <div>
+                      <h3 className="text-xl lg:text-2xl font-serif font-normal text-neutral-900 mb-4">
+                        <span className="mr-2">{step.id}.</span>
+                        {step.title}
+                      </h3>
+                      <p className="text-base text-neutral-600 leading-relaxed">
+                        {step.description}
+                      </p>
                     </div>
                   </motion.div>
 
-                  {/* Center dot for timeline */}
+                  {/* Center dot for timeline - desktop only */}
                   <motion.div 
-                    className="absolute left-[24px] lg:left-[50%] transform lg:-translate-x-1/2 w-6 h-6 bg-white border-4 border-[#2a2a2a] z-10"
+                    className="hidden lg:flex absolute left-[50%] transform -translate-x-1/2 w-6 h-6 bg-white border-4 border-[#2a2a2a] z-10"
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
                     viewport={{ once: true }}
