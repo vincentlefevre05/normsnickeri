@@ -39,7 +39,7 @@ const Hero = () => {
                 playsInline
                 className="w-full h-full object-contain"
               >
-                <source src="/hero-interior-video.mp4" type="video/mp4" />
+                <source src="https://wbla6tjpp6zcbpyx.public.blob.vercel-storage.com/Gen-4%2520Turbo%2520Video%252C%2520I%2520want%2520you%2520to%2520make%2520a%2520video%2520in%2520which%2520the%2520camera%2520moves%2520steadily%2520and%2520very%2520slowly%2520forward%2520through%2520the%2520interior%2520%25203418647912%25204K.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
