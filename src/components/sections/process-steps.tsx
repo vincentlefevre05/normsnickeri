@@ -72,7 +72,7 @@ const ProcessSteps = () => {
 
   return (
     <section id="process" className="py-24 bg-gradient-to-b from-white to-neutral-50 overflow-hidden">
-      <div className="max-w-5xl mx-auto" style={{paddingLeft: '60px', paddingRight: '60px'}}>
+      <div className="max-w-5xl mx-auto px-6 lg:px-[60px]">
         {/* Section header */}
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
@@ -95,8 +95,8 @@ const ProcessSteps = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="relative"
         >
-          {/* Animated timeline line - hidden on mobile */}
-          <div className="hidden lg:block absolute left-[50%] transform -translate-x-1/2 w-[2px] h-full bg-neutral-200">
+          {/* Animated timeline line */}
+          <div className="absolute left-[24px] lg:left-[50%] transform lg:-translate-x-1/2 w-[2px] h-full bg-neutral-200">
             <motion.div 
               className="absolute top-0 left-0 w-full bg-gradient-to-b from-[#2a2a2a] to-neutral-600"
               style={{ height: lineHeight }}
@@ -122,13 +122,13 @@ const ProcessSteps = () => {
                       scale: 1.02,
                       boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
                     }}
-                    className="w-full lg:w-[calc(50%-3rem)] bg-white p-8 shadow-lg"
+                    className="w-full lg:w-[calc(50%-3rem)] bg-white p-6 lg:p-8 shadow-lg ml-12 lg:ml-0"
                   >
-                    <div className="flex items-start gap-6">
+                    <div className="flex items-start gap-4 lg:gap-6">
                       {/* Number circle */}
                       <div className="relative">
-                        <div className="w-20 h-20 bg-gradient-to-br from-[#2a2a2a] to-neutral-700 flex items-center justify-center shadow-xl">
-                          <span className="text-2xl font-bold text-white">{step.id}</span>
+                        <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-[#2a2a2a] to-neutral-700 flex items-center justify-center shadow-xl">
+                          <span className="text-xl lg:text-2xl font-bold text-white">{step.id}</span>
                         </div>
                       </div>
 
@@ -144,9 +144,9 @@ const ProcessSteps = () => {
                     </div>
                   </motion.div>
 
-                  {/* Center dot for timeline - hidden on mobile */}
+                  {/* Center dot for timeline */}
                   <motion.div 
-                    className="hidden lg:flex absolute left-[50%] transform -translate-x-1/2 w-6 h-6 bg-white border-4 border-[#2a2a2a] z-10"
+                    className="absolute left-[24px] lg:left-[50%] transform lg:-translate-x-1/2 w-6 h-6 bg-white border-4 border-[#2a2a2a] z-10"
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
                     viewport={{ once: true }}

@@ -5,8 +5,8 @@ import Image from 'next/image'
 const Hero = () => {
   return (
     <section id="top" className="min-h-screen flex items-center bg-[#fefbfa]">
-      <div className="max-w-7xl mx-auto w-full" style={{paddingLeft: '60px', paddingRight: '60px', paddingTop: '120px', paddingBottom: '60px'}}>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto w-full pt-20 pb-10 px-6 lg:pt-[120px] lg:pb-[60px] lg:px-[60px]">
+        <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Column - Text Content */}
           <div className="space-y-6">
             {/* Main Heading */}
