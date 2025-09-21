@@ -8,12 +8,12 @@ const services = [
   {
     id: 'platsbyggda',
     title: 'Platsbyggda möbler',
-    description: 'Bokhyllor, garderober och förvaring byggda på plats efter rummet.'
+    description: 'Bokhyllor, garderober och förvaring platsbyggda efter rummet.'
   },
   {
     id: 'specialsnickerier',
     title: 'Specialsnickerier',
-    description: 'Unika lösningar som receptionsdiskar, paneler och specialdetaljer.'
+    description: 'Unika lösningar som receptionsdiskar, tidsenliga lister, paneler eller unika specialdetaljer.'
   },
   {
     id: 'renovering',
@@ -29,6 +29,11 @@ const services = [
     id: 'samarbete',
     title: 'Samarbete med arkitekter & designers',
     description: 'Ritningsunderlag, materialprover och tekniska lösningar i dialog.'
+  },
+  {
+    id: 'maskinpark',
+    title: 'Bred maskinpark och lackverkstad',
+    description: 'Modern maskinpark med egen lackverkstad och lackrobot.'
   }
 ]
 

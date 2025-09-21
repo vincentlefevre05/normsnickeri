@@ -8,23 +8,23 @@ const galleryProjects = [
   { 
     id: 1, 
     src: '/gallery-image-1.png', 
-    alt: 'Platsbyggd bokhylla',
-    title: 'Platsbyggd bokhylla i ek',
-    description: 'Skräddarsydd bokhylla anpassad efter rummets dimensioner. Tillverkad i massiv ek med integrerad belysning.'
+    alt: 'Kök i ekfanér',
+    title: 'Minimalistiskt kök',
+    description: 'Helrenoverat kök med fronter i ekfanér, specialtillverkade handtag i samma material.'
   },
   { 
     id: 2, 
     src: '/gallery-image-2.png', 
-    alt: 'Kök i ekfanér',
-    title: 'Minimalistiskt kök',
-    description: 'Helrenoverat kök med fronter i ekfanér. Diskbänk i rostfritt stål och handtag i borstad mässing.'
+    alt: 'Platsbyggd hallmöbel',
+    title: 'Platsbyggd hallmöbel i lackad kulör',
+    description: 'Skräddarsydd hallmöbel anpassad efter rummets dimensioner. '
   },
   { 
     id: 3, 
-    src: '/gallery-image-3.png', 
-    alt: 'Specialbyggd receptionsdisk',
-    title: 'Receptionsdisk för kontorsmiljö',
-    description: 'Specialdesignad reception med dolda kabeldragningar. Kombinerar funktionalitet med elegant formspråk.'
+    src: '/gallery-image-3.jpg', 
+    alt: 'Vägghängd förvaring',
+    title: 'Vägghängd förvaring',
+    description: 'Måttbeställd förvaringslösning med skjutdörrar och öppna hyllplan.'
   },
 ]
 

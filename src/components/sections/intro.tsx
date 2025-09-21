@@ -9,14 +9,14 @@ const Intro = () => {
           {/* Left Column - Title */}
           <div className="py-4">
             <h2 className="text-[2rem] md:text-[2.5rem] font-serif font-normal leading-[1.2] tracking-[0.01em] text-black">
-              Måttanpassade lösningar för hem, kontor och offentliga miljöer.
+              Vi skapar lösningar för hem, kontor och offentliga miljöer.
             </h2>
           </div>
           
           {/* Right Column - Text and CTA */}
           <div className="py-4">
             <p className="text-lg md:text-xl font-sans font-normal leading-[1.5] text-neutral-600 mb-8">
-              Vi arbetar med precision, form och funktion, alltid med känsla för detaljer och material. I tätt samarbete med arkitekter och inredningsdesigners och förverkligar komplexa idéer med hög finish.
+              Vi förvandlar idéer till form, alltid med känsla för detaljer och material. I tätt samarbete med kund, fastighetsförvaltare, arkitekter och inredningsdesigners förverkligar vi komplexa idéer med hög finish.
             </p>
             
             <Link href="#tjanster">

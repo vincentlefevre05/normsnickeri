@@ -76,11 +76,6 @@ const Footer = () => {
                     Galleri
                   </Link>
                 </li>
-                <li>
-                  <Link href="#" className="text-neutral-400 hover:text-white transition-colors text-sm">
-                    Referenser
-                  </Link>
-                </li>
               </ul>
             </div>
 
@@ -91,13 +86,7 @@ const Footer = () => {
               </h4>
               <ul className="space-y-3">
                 <li className="text-neutral-400 text-sm">
-                  <p className="font-medium text-white">Ring oss</p>
-                  <a href="tel:+46705123456" className="hover:text-white transition-colors">
-                    070-512 34 56
-                  </a>
-                </li>
-                <li className="text-neutral-400 text-sm">
-                  <p className="font-medium text-white mt-4">Mejla oss</p>
+                  <p className="font-medium text-white">Mejla oss</p>
                   <a href="mailto:info@normsnickeri.se" className="hover:text-white transition-colors">
                     info@normsnickeri.se
                   </a>
@@ -114,9 +103,10 @@ const Footer = () => {
               <Image
                 src="/logo-light.png"
                 alt="Norm Snickeri"
-                width={120}
-                height={40}
+                width={240}
+                height={80}
                 className="h-10 w-auto"
+                priority
               />
             </div>
             
