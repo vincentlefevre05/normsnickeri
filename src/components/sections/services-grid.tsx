@@ -105,7 +105,7 @@ const ServicesGrid = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            {services.map((service, index) => (
+            {services.map((service) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}

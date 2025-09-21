@@ -30,7 +30,7 @@ const ContactFormSection = () => {
         phone: '',
         projectDescription: ''
       })
-    } catch (error) {
+    } catch {
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)

@@ -26,14 +26,14 @@ export const metadata: Metadata = {
   },
   description: companyInfo.description,
   keywords: [
-    "byggeforetak",
+    "snickeriföretag",
     "renovering", 
-    "nybygg",
-    "påbygg",
-    "byggfirma",
-    "Norge",
+    "nybygge",
+    "påbyggnad",
+    "byggföretag",
+    "Sverige",
     "kvalitet",
-    "håndverk"
+    "hantverk"
   ],
   authors: [{ name: companyInfo.name }],
   creator: companyInfo.name,
@@ -51,8 +51,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "nb_NO",
-    url: "https://normbygg.no",
+    locale: "sv_SE",
+    url: "https://normsnickeri.se",
     title: `${companyInfo.name} - ${companyInfo.tagline}`,
     description: companyInfo.description,
     siteName: companyInfo.name,
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     description: companyInfo.description,
   },
   alternates: {
-    canonical: "https://normbygg.no",
+    canonical: "https://normsnickeri.se",
   },
 };
 
@@ -73,7 +73,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="no" className="scroll-smooth">
+    <html lang="sv" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

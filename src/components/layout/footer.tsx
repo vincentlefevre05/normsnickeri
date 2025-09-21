@@ -5,13 +5,6 @@ import Image from 'next/image'
 const Footer = () => {
   const currentYear = new Date().getFullYear()
 
-  const menuItems = [
-    { name: 'Om oss', href: '#om-oss' },
-    { name: 'Våra tjänster', href: '#tjanster' },
-    { name: 'Så arbetar vi', href: '#process' },
-    { name: 'Galleri', href: '#galleri' },
-    { name: 'Kontakt', href: '#kontakt' },
-  ]
 
   return (
     <footer className="bg-neutral-800 text-neutral-300">
