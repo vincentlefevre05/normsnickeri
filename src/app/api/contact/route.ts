@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { Resend } from 'resend'
+import sgMail from '@sendgrid/mail'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+sgMail.setApiKey(process.env.SENDGRID_API_KEY || '')
 
 // Helper function to parse form data with files
 async function parseFormData(request: NextRequest) {
@@ -109,23 +109,31 @@ export async function POST(request: NextRequest) {
         ` : ''}
         
         <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; color: #666; font-size: 12px;">
-          <p>Detta meddelande skickades från kontaktformuläret på Norms Nickeri webbsida.</p>
+          <p>Detta meddelande skickades från kontaktformuläret på Norm Snickeri webbsida.</p>
           <p>Datum: ${new Date().toLocaleString('sv-SE')}</p>
         </div>
       </div>
     `
     
-    // Send email
-    const emailResult = await resend.emails.send({
-      from: 'Norms Snickeri Webbsida <noreply@normsnickeri.se>',
+    // Send email with SendGrid
+    const emailData = {
       to: process.env.CONTACT_EMAIL || 'info@normsnickeri.se',
+      from: 'info@normsnickeri.se', // Must be your verified sender
       subject: `Ny kontaktförfrågan från ${data.name}`,
       html: emailHtml,
-      attachments: attachments.length > 0 ? attachments : undefined,
-    })
+      attachments: attachments.map(att => ({
+        content: att.content.toString('base64'),
+        filename: att.filename,
+        type: 'application/octet-stream',
+        disposition: 'attachment'
+      }))
+    }
     
-    if (emailResult.error) {
-      console.error('Email sending failed:', emailResult.error)
+    try {
+      await sgMail.send(emailData)
+      console.log('Email sent successfully to:', emailData.to)
+    } catch (error) {
+      console.error('SendGrid error:', error)
       return NextResponse.json(
         { error: 'Ett fel uppstod när meddelandet skulle skickas. Försök igen senare.' },
         { status: 500 }
@@ -150,7 +158,7 @@ export async function POST(request: NextRequest) {
         </div>
         
         <p>Med vänliga hälsningar,<br>
-        <strong>Norms Nickeri</strong></p>
+        <strong>Norm Snickeri</strong></p>
         
         <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; color: #666; font-size: 12px;">
           <p>Detta är en automatisk bekräftelse. Svara inte på detta meddelande.</p>
@@ -158,17 +166,26 @@ export async function POST(request: NextRequest) {
       </div>
     `
     
-    await resend.emails.send({
-      from: 'Norms Nickeri <noreply@normsnickeri.se>',
+    // Send confirmation email
+    const confirmationData = {
       to: data.email,
+      from: 'info@normsnickeri.se', // Must be your verified sender
       subject: 'Bekräftelse - Din förfrågan har mottagits',
       html: confirmationHtml,
-    })
+    }
+    
+    try {
+      await sgMail.send(confirmationData)
+      console.log('Confirmation email sent to:', data.email)
+    } catch (error) {
+      console.error('Confirmation email error:', error)
+      // Don't fail the whole request if confirmation fails
+    }
     
     return NextResponse.json(
       { 
         message: 'Meddelandet har skickats framgångsrikt!',
-        emailId: emailResult.data?.id 
+        timestamp: new Date().toISOString()
       },
       { status: 200 }
     )

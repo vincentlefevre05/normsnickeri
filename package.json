@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
+    "@sendgrid/mail": "^8.1.6",
     "@types/formidable": "^3.4.5",
     "clsx": "^2.1.1",
     "formidable": "^3.5.4",
