@@ -32,7 +32,7 @@ const GalleryPreview = () => {
 
   return (
     <section id="galleri" className="py-24 bg-[#fefbfa]">
-      <div className="max-w-7xl mx-auto" style={{paddingLeft: '60px', paddingRight: '60px'}}>
+      <div className="max-w-7xl mx-auto px-8 lg:px-[60px]">
         {/* Alternating layout with images and text */}
         <div className="space-y-24">
           {galleryProjects.map((project, index) => {
@@ -68,10 +68,10 @@ const GalleryPreview = () => {
                 <div className={`space-y-4 ${
                   isEven ? 'lg:order-2' : 'lg:order-1'
                 }`}>
-                  <h3 className="text-[1.5rem] font-serif font-normal text-neutral-900">
+                  <h3 className="text-lg lg:text-[1.5rem] font-serif font-normal text-neutral-900">
                     {project.title}
                   </h3>
-                  <p className="text-lg text-neutral-600 leading-relaxed">
+                  <p className="text-base lg:text-lg text-neutral-600 leading-relaxed">
                     {project.description}
                   </p>
                 </div>

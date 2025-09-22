@@ -14,7 +14,7 @@ const companies = [
 const AboutNorm = () => {
   return (
     <section id="about-norm" className="pt-24 pb-40 bg-[#fefbfa]">
-      <div className="max-w-4xl mx-auto" style={{paddingLeft: '60px', paddingRight: '60px'}}>
+      <div className="max-w-4xl mx-auto px-8 lg:px-[60px]">
         {/* Centered text content */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -23,12 +23,12 @@ const AboutNorm = () => {
           transition={{ duration: 0.8 }}
           className="text-center space-y-6 mb-16"
         >
-          <h2 className="text-[2rem] md:text-[2.5rem] font-serif font-normal leading-[1.2] tracking-[0.01em] text-black">
+          <h2 className="text-[1.75rem] md:text-[2rem] lg:text-[2.5rem] font-serif font-normal leading-[1.2] tracking-[0.01em] text-black">
             Vilka är Norm?
           </h2>
           
           <div className="space-y-4">
-            <p className="text-lg text-neutral-600 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-base lg:text-lg text-neutral-600 leading-relaxed max-w-3xl mx-auto">
               Norm är en koncern som samlar specialistbolag inom bygg, snickeri, logistik och maskinuthyrning. Genom att kombinera hantverkskompetens med strukturerad projektledning och effektiv materialhantering erbjuder vi helhetslösningar som skapar värde, både för våra kunder och för branschen.  Våra bolag verkar självständigt men samverkar tätt - det är så vi bygger vidare.
             </p>
           </div>
@@ -42,19 +42,19 @@ const AboutNorm = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="relative overflow-hidden"
         >
-          <div className="flex animate-scroll space-x-12 group">
+          <div className="flex animate-scroll space-x-6 lg:space-x-12 group">
             {/* First set of logos */}
             {companies.map((company) => (
               <div
                 key={`first-${company.id}`}
-                className="flex-shrink-0 flex items-center justify-center h-20 w-48 group-hover:pause-animation"
+                className="flex-shrink-0 flex items-center justify-center h-20 w-32 lg:w-48 group-hover:pause-animation"
               >
                 <Image
                   src={company.logo}
                   alt={company.name}
                   width={200}
                   height={50}
-                  className={`${company.name === 'Norm Bygg' ? 'h-10' : 'h-11'} w-auto opacity-80 hover:opacity-100 transition-opacity duration-300`}
+                  className={`${company.name === 'Norm Bygg' ? 'h-7 lg:h-10' : 'h-11'} w-auto opacity-80 hover:opacity-100 transition-opacity duration-300`}
                   style={{ objectFit: 'contain' }}
                 />
               </div>
@@ -63,14 +63,14 @@ const AboutNorm = () => {
             {companies.map((company) => (
               <div
                 key={`second-${company.id}`}
-                className="flex-shrink-0 flex items-center justify-center h-20 w-48 group-hover:pause-animation"
+                className="flex-shrink-0 flex items-center justify-center h-20 w-32 lg:w-48 group-hover:pause-animation"
               >
                 <Image
                   src={company.logo}
                   alt={company.name}
                   width={200}
                   height={50}
-                  className={`${company.name === 'Norm Bygg' ? 'h-10' : 'h-11'} w-auto opacity-80 hover:opacity-100 transition-opacity duration-300`}
+                  className={`${company.name === 'Norm Bygg' ? 'h-7 lg:h-10' : 'h-11'} w-auto opacity-80 hover:opacity-100 transition-opacity duration-300`}
                   style={{ objectFit: 'contain' }}
                 />
               </div>
@@ -90,7 +90,22 @@ const AboutNorm = () => {
         }
         
         .animate-scroll {
-          animation: scroll 20s linear infinite;
+          animation: scroll 8s linear infinite;
+        }
+        
+        @media (max-width: 1024px) {
+          .animate-scroll {
+            animation: scroll-mobile 15s ease-in-out infinite;
+          }
+          
+          @keyframes scroll-mobile {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-225%);
+            }
+          }
         }
         
         .group:hover .animate-scroll {

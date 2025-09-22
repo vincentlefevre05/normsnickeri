@@ -81,7 +81,7 @@ const ProcessSteps = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <h2 className="text-[2rem] md:text-[2.5rem] font-serif font-normal leading-[1.2] tracking-[0.01em] text-black mb-4">
+          <h2 className="text-[1.75rem] md:text-[2rem] lg:text-[2.5rem] font-serif font-normal leading-[1.2] tracking-[0.01em] text-black mb-4">
             Så arbetar vi
           </h2>
         </motion.div>
@@ -125,7 +125,7 @@ const ProcessSteps = () => {
                     className="w-full lg:w-[calc(50%-3rem)] bg-white p-6 lg:p-8 shadow-lg"
                   >
                     <div>
-                      <h3 className="text-xl lg:text-2xl font-serif font-normal text-neutral-900 mb-4">
+                      <h3 className="text-lg lg:text-2xl font-serif font-normal text-neutral-900 mb-4">
                         <span className="mr-2">{step.id}.</span>
                         {step.title}
                       </h3>

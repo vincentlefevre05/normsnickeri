@@ -9,16 +9,16 @@ const Footer = () => {
   return (
     <footer className="bg-neutral-800 text-neutral-300">
       {/* Main footer content */}
-      <div className="max-w-7xl mx-auto" style={{paddingLeft: '60px', paddingRight: '60px', paddingTop: '80px', paddingBottom: '40px'}}>
+      <div className="max-w-7xl mx-auto px-8 lg:px-[60px] pt-16 lg:pt-20 pb-8 lg:pb-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
           
           {/* Left side - Company tagline */}
           <div className="space-y-6">
-            <p className="text-[1.5rem] font-serif font-normal text-white leading-relaxed max-w-md">
+            <p className="text-lg lg:text-[1.5rem] font-serif font-normal text-white leading-relaxed max-w-md">
               Vi är specialister på måttanpassade snickerier med precision i form, funktion och material.
             </p>
             <Link href="#kontakt">
-              <button className="bg-white hover:bg-neutral-200 text-[#2a2a2a] px-8 py-4 font-medium transition-colors duration-200 text-base">
+              <button className="bg-white hover:bg-neutral-200 text-[#2a2a2a] px-6 py-3 lg:px-8 lg:py-4 font-medium transition-colors duration-200 text-base">
                 Kontakta oss
               </button>
             </Link>
@@ -28,7 +28,7 @@ const Footer = () => {
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Products/Services column */}
             <div>
-              <h4 className="text-base font-semibold text-white mb-6">
+              <h4 className="text-sm lg:text-base font-semibold text-white mb-6">
                 Tjänster
               </h4>
               <ul className="space-y-3">
@@ -57,7 +57,7 @@ const Footer = () => {
 
             {/* Resources column */}
             <div>
-              <h4 className="text-base font-semibold text-white mb-6">
+              <h4 className="text-sm lg:text-base font-semibold text-white mb-6">
                 Information
               </h4>
               <ul className="space-y-3">
@@ -81,7 +81,7 @@ const Footer = () => {
 
             {/* Contact column */}
             <div>
-              <h4 className="text-base font-semibold text-white mb-6">
+              <h4 className="text-sm lg:text-base font-semibold text-white mb-6">
                 Kontakt
               </h4>
               <ul className="space-y-3">
@@ -105,7 +105,7 @@ const Footer = () => {
                 alt="Norm Snickeri"
                 width={240}
                 height={80}
-                className="h-10 w-auto"
+                className="h-8 lg:h-10 w-auto"
                 priority
               />
             </div>

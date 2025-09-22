@@ -119,7 +119,7 @@ const ContactFormSection = () => {
   if (submitStatus === 'success') {
     return (
       <section id="contact-form-section" className="py-24 bg-white">
-        <div className="max-w-3xl mx-auto px-4 text-center">
+        <div className="max-w-3xl mx-auto px-8 lg:px-4 text-center">
           <div className="bg-[#fefbfa] p-12">
             <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
             <h3 className="text-lg font-semibold text-neutral-900 mb-4">
@@ -142,7 +142,7 @@ const ContactFormSection = () => {
 
   return (
     <section id="contact-form-section" className="py-24 bg-white">
-      <div className="max-w-3xl mx-auto px-4">
+      <div className="max-w-3xl mx-auto px-8 lg:px-4">
         {/* Error/Success Message */}
         {submitStatus === 'error' && submitMessage && (
           <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-start gap-3">

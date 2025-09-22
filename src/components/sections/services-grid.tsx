@@ -63,7 +63,7 @@ const ServicesGrid = () => {
 
   return (
     <section id="tjanster" className="py-24 bg-[#fefbfa] overflow-hidden">
-      <div className="max-w-7xl mx-auto" style={{paddingLeft: '60px', paddingRight: '60px'}}>
+      <div className="max-w-7xl mx-auto px-8 lg:px-[60px]">
         {/* Section header */}
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
@@ -72,10 +72,10 @@ const ServicesGrid = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-[2rem] md:text-[2.5rem] font-serif font-normal leading-[1.2] tracking-[0.01em] text-black mb-4">
+          <h2 className="text-[1.75rem] md:text-[2rem] lg:text-[2.5rem] font-serif font-normal leading-[1.2] tracking-[0.01em] text-black mb-4">
             Våra tjänster
           </h2>
-          <p className="text-lg text-neutral-600">
+          <p className="text-base lg:text-lg text-neutral-600">
             Från idé till montering – alltid måttanpassat.
           </p>
         </motion.div>
@@ -116,7 +116,7 @@ const ServicesGrid = () => {
                 variants={itemVariants}
                 className="border-b border-neutral-200 pb-6 last:border-b-0"
               >
-                <h3 className="text-lg font-semibold text-neutral-900 mb-2">
+                <h3 className="text-base lg:text-lg font-semibold text-neutral-900 mb-2">
                   {service.title}
                 </h3>
                 <p className="text-base text-neutral-600 leading-relaxed">

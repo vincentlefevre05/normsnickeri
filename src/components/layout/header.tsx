@@ -65,8 +65,8 @@ const Header = () => {
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
-      <div className="max-w-7xl mx-auto" style={{paddingLeft: '40px', paddingRight: '40px'}}>
-        <div className="flex items-center justify-between py-6" style={{minHeight: '90px'}}>
+      <div className="max-w-7xl mx-auto px-8 lg:px-[40px]">
+        <div className="flex items-center justify-between py-4 lg:py-6" style={{minHeight: '90px'}}>
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
@@ -74,7 +74,7 @@ const Header = () => {
               alt="Norm Snickeri"
               width={200}
               height={40}
-              className="h-10 w-auto transition-opacity duration-300"
+              className="h-8 lg:h-10 w-auto transition-opacity duration-300"
               priority
             />
           </Link>
@@ -86,7 +86,7 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="text-neutral-600 hover:text-black transition-colors duration-200 font-medium text-lg px-4 cursor-pointer"
+                className="text-neutral-600 hover:text-black transition-colors duration-200 font-medium text-base lg:text-lg px-4 cursor-pointer"
               >
                 {item.name}
               </a>
@@ -120,14 +120,14 @@ const Header = () => {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="lg:hidden bg-[#fefbfa] border-t border-neutral-200">
-          <nav className="max-w-7xl mx-auto py-6" style={{paddingLeft: '40px', paddingRight: '40px'}}>
+          <nav className="max-w-7xl mx-auto py-6 px-8 lg:px-[40px]">
             <ul className="space-y-4">
               {navItems.map((item) => (
                 <li key={item.name}>
                   <a
                     href={item.href}
                     onClick={(e) => handleNavClick(e, item.href)}
-                    className="block text-lg text-neutral-600 hover:text-black transition-colors duration-200 py-2 cursor-pointer"
+                    className="block text-base lg:text-lg text-neutral-600 hover:text-black transition-colors duration-200 py-2 cursor-pointer"
                   >
                     {item.name}
                   </a>
