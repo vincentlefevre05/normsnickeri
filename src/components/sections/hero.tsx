@@ -5,9 +5,18 @@ const Hero = () => {
   return (
     <section id="top" className="min-h-screen flex items-start lg:items-center bg-[#fefbfa]">
       <div className="max-w-7xl mx-auto w-full pt-24 pb-10 px-8 lg:pt-[120px] lg:pb-[60px] lg:px-[60px]">
-        <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-          {/* Left Column - Text Content */}
-          <div className="space-y-6">
+        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-2 lg:items-center lg:gap-16">
+          {/* Mobile Image */}
+          <div className="lg:hidden">
+            <img
+              src="/hero-mobile.jpg"
+              alt="Norm Snickeri interiör"
+              className="w-full h-auto"
+            />
+          </div>
+
+          {/* Text Content */}
+          <div className="space-y-6 lg:order-1">
             {/* Main Heading */}
             <h1 className="text-[1.75rem] md:text-[2rem] lg:text-[2.5rem] font-serif font-normal leading-[1.2] tracking-[0.01em] text-black">
               Vi gör detaljerna. Detaljerna gör helheten.
@@ -28,8 +37,8 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Right Column - Video */}
-          <div className="relative flex justify-end">
+          {/* Desktop Video */}
+          <div className="hidden lg:flex lg:justify-end lg:order-2">
             <div className="w-full max-h-[70vh]">
               <video
                 autoPlay
