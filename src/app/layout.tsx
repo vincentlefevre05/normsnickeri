@@ -20,6 +20,7 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://normsnickeri.se"),
   title: {
     default: `${companyInfo.name} - ${companyInfo.tagline}`,
     template: `%s | ${companyInfo.name}`,
@@ -65,6 +66,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://normsnickeri.se",
   },
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    shortcut: ["/favicon.svg"],
+  },
 };
 
 export default function RootLayout({
@@ -78,6 +83,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Nuosu+SIL&display=swap" rel="stylesheet" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
       <body
         className={`${nuosuSil.variable} ${sourceSans.variable} font-sans antialiased`}
