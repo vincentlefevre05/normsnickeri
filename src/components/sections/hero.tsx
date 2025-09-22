@@ -4,8 +4,30 @@ import Link from 'next/link'
 const Hero = () => {
   return (
     <section id="top" className="min-h-screen flex items-start lg:items-center bg-[#fefbfa]">
-      <div className="max-w-7xl mx-auto w-full pt-24 pb-10 px-8 lg:pt-[120px] lg:pb-[60px] lg:px-[60px]">
-        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-2 lg:items-center lg:gap-16">
+      <div className="max-w-7xl mx-auto w-full pt-32 pb-12 px-8 sm:pt-36 lg:pt-[120px] lg:pb-[60px] lg:px-[60px]">
+        <div className="flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:items-center lg:gap-16">
+          {/* Text Content */}
+          <div className="space-y-6 lg:order-1">
+            {/* Main Heading */}
+            <h1 className="text-[2rem] md:text-[2.25rem] lg:text-[2.5rem] font-serif font-normal leading-[1.2] tracking-[0.01em] text-black">
+              Vi gör detaljerna. Detaljerna gör helheten.
+            </h1>
+            
+            {/* Subheading */}
+            <p className="text-lg md:text-xl lg:text-xl font-sans font-normal leading-[1.5] text-neutral-600">
+              Måttanpassade snickerier med precision i form, funktion och material.
+            </p>
+            
+            {/* CTA Button */}
+            <div className="pt-4 flex justify-center lg:justify-start">
+              <Link href="#process">
+                <button className="w-full bg-[#2a2a2a] hover:bg-[#333] text-[#fefbfa] px-34 py-3 font-medium transition-colors duration-200 text-base lg:w-auto lg:px-20 lg:py-3">
+                  Så arbetar vi
+                </button>
+              </Link>
+            </div>
+          </div>
+
           {/* Mobile Image */}
           <div className="lg:hidden">
             <img
@@ -15,28 +37,6 @@ const Hero = () => {
             />
           </div>
 
-          {/* Text Content */}
-          <div className="space-y-6 lg:order-1">
-            {/* Main Heading */}
-            <h1 className="text-[1.75rem] md:text-[2rem] lg:text-[2.5rem] font-serif font-normal leading-[1.2] tracking-[0.01em] text-black">
-              Vi gör detaljerna. Detaljerna gör helheten.
-            </h1>
-            
-            {/* Subheading */}
-            <p className="text-base md:text-lg lg:text-xl font-sans font-normal leading-[1.5] text-neutral-600">
-              Måttanpassade snickerier med precision i form, funktion och material.
-            </p>
-            
-            {/* CTA Button */}
-            <div className="pt-4">
-              <Link href="#process">
-                <button className="bg-[#2a2a2a] hover:bg-[#333] text-[#fefbfa] px-6 py-3 lg:px-8 lg:py-4 font-medium transition-colors duration-200 text-base">
-                  Så arbetar vi
-                </button>
-              </Link>
-            </div>
-          </div>
-          
           {/* Desktop Video */}
           <div className="hidden lg:flex lg:justify-end lg:order-2">
             <div className="w-full max-h-[70vh]">
