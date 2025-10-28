@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     canonical: "https://normsnickeri.se",
   },
   verification: {
-    google: "google-site-verification-code-will-go-here",
+    google: "cgPKaT0kI-4P5Pr0iHxMoz1i0gFSSdkXR_5VGM1Ao50",
   },
   icons: {
     icon: [
